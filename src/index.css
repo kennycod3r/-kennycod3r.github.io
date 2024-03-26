@@ -31,5 +31,5 @@ code {
 }
 
 .fsb {
-  gap: 10px;
+  justify-content: space-between;
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import add from "../../images/add.svg";
 
 export default function ExpenseEmoji({ expenseLabel, handleAddExpense }) {

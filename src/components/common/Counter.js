@@ -1,21 +1,19 @@
 // Counter.js
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
 
-function Counter() {
-  const [count, setCount] = useState(50);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-    }, 60);
-
-    return () => clearInterval(interval);
-  }, []);
-
+function Counter({count}) {
+  //const [PreviousCount, setPreviousCount] = useState(350);
   return (
-    <h1 className={`counterLabel ${count > 0 ? "decreasing" : ""}`}>
-      + ${count}
-    </h1>
+    <>
+      <div className="counter--sec">
+        <h1 className={`counterLabel ${count > 0 ? "decreasing" : ""}`}>
+          + ${count}
+        </h1>
+      </div>
+      <p style={{ fontSize: "small", color: "darkgray" }}>
+        last refreshed 20mins ago
+      </p>
+    </>
   );
 }
 
